@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Effects</title>
+    <style>
+
+        div {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn1">Hide Me!</button>
+    <button id="btn2">Show Me!</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">slideUp</button>
+    <button id="btn5">SlideDown</button>
+    <button id="btn6">ToggleSlide</button>
+    <button id="btn7">FadeOut</button>
+    <button id="btn8">FadeIn</button>
+    <button id="btn9">FadeToggle</button>
+
+
+    <div class="div1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni recusandae modi ratione, incidunt totam adipisci expedita saepe nemo quisquam, quaerat error, eveniet consequatur impedit sint culpa vitae beatae! Magnam, enim.</p>
+    </div>
+    <div class="div2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, accusantium porro. Ipsam, repudiandae. Asperiores odio veritatis porro numquam pariatur vel perspiciatis, doloremque, atque sequi animi magni dolor, dicta minima quidem?</p>
+    </div>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione reiciendis cum modi enim, reprehenderit delectus pariatur itaque numquam, officia alias ab cumque nobis culpa recusandae vel, eveniet placeat quis soluta!</p>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(fn1);
+            $("#btn2").click(fn2);
+            $("#btn3").click(fn3);
+            function fn1(){
+                $(".div1 > p").hide();
+            }
+            function fn2(){
+                $(".div1 > p").show();
+            }
+            function fn3(){
+                $(".div3 > p").toggle();
+            }
+
+            $("#btn4").click(fn4);
+            $("#btn5").click(fn5);
+            $("#btn6").click(fn6);
+
+            function fn4(){
+                $(".div1").slideUp();
+            }
+            function fn5(){
+                $(".div1").slideDown();
+            }
+            function fn6(){
+                $(".div3").slideToggle();
+            }
+
+            $("#btn7").click(fn7);
+            $("#btn8").click(fn8);
+            $("#btn9").click(fn9);
+
+            function fn7(){
+                $(".div2").fadeOut();
+            }
+            function fn8(){
+                $(".div2").fadeIn();
+            }
+            function fn9(){
+                $(".div3").fadeToggle();
+            }
+
+        })
+            
+    </script>
+        
+    
+    
+</body>
+</html>

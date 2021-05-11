@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jquery</title>
+
+    <style>
+        div{
+            border: 2px solid red;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="section1">
+        <h1 id="head1">jquery first test run</h1>
+        <button onclick="fn1()">click me!</button>
+    </div>
+
+    <div id="section2">
+        <h1>Second Heading</h1>
+        <p>jquery selector type</p>
+        <button onclick="fn2()">Try Me</button>
+    </div>
+
+    <div class="section3">
+        <ul>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+        <button id="btn2">Hide List</button>
+    </div>
+    <div class="section4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iure odio qui saepe corporis atque deserunt exercitationem sapiente, nulla officiis id, ullam recusandae illum. Culpa dolores beatae asperiores aspernatur ipsam?</p>
+    </div>
+
+    
+</body>
+
+<script src="./js/jquery.js"></script>
+<script>
+
+    function fn1() {
+        $('#head1').fadeToggle();
+    }
+
+    function fn2() {
+        $(".section2 > h1").fadeToggle(1500);
+    }
+
+
+    $(document).ready(function(){
+
+        $("#btn2").click(fn3);
+
+        function fn3() {
+            $(".section3 > ul > li").fadeToggle();
+        }
+    });
+
+
+</script>
+</html>

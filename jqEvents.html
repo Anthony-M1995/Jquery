@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Events</title>
+
+    <style>
+
+        div {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="events">
+
+        <h1>Jquery events practice</h1>
+
+    </div>
+
+    <div class="div2">
+
+        <ul>
+            <li>list 1</li>
+            <li>list 1</li>
+            <li>list 1</li>
+            <li>list 1</li>
+        </ul>
+
+        <button id="btn2" onclick="fn1()">click Me!</button>
+
+    </div>
+
+    <div class="div3">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, fugit ratione! Sequi officia adipisci pariatur obcaecati assumenda autem ea voluptatibus, repellendus eveniet beatae saepe blanditiis repudiandae dignissimos illum cum nihil!</p>
+
+        <button id="btn3" type="button">Try Me!</button>
+
+    </div>
+
+    <div class="div4">
+        <h1>mouse enter event</h1>
+
+        <button id="btn4">Hi! Hover ME!</button>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quia asperiores labore aut vero hic quod reiciendis fugiat fuga architecto quae dolor odit unde atque earum, iste consectetur sunt rerum.</p>
+
+        
+    </div>
+
+    <div class="div5">
+        <h1>mouse leave event</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A reprehenderit repellendus assumenda necessitatibus quod sunt porro sit officia sapiente molestiae ab velit praesentium omnis, atque vel eaque libero, odio esse!</p>
+
+    </div>
+
+    <div class="div6">
+        <h1>both mouse enter and mouse leave is equal to hover event </h1>
+
+        <button id="btn6">Hover Event</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo numquam alias culpa sint perferendis autem ipsum necessitatibus repellendus, dolor quam, at, minima ratione cumque soluta commodi. Iste veniam placeat repellendus.</p>
+
+    </div>
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+
+        function fn1() {
+            $('.div2 > ul').fadeToggle();
+        }
+
+        
+        $(document).ready(function(){
+
+            $("#btn3").click(fn2);
+
+            function fn2() {
+                $(".div3 > p").fadeToggle();
+            }
+
+            $("#btn4").mouseenter(fn2);
+            $("#btn4").mouseleave(fn3);
+
+            function fn2() {
+                $(".div4 > p").fadeToggle();
+            }
+            function fn3() {
+                $(".div5 > p").fadeToggle();
+            }
+
+            $("#btn6").hover(fn4,fn5);
+
+            function fn4() {
+                $(".div6 > p").fadeToggle();
+            }
+            function fn5() {
+                $(".div6 > p").fadeToggle();
+            }
+
+        })
+
+
+
+    </script>
+    
+
+</body>
+
+
+
+</html>
