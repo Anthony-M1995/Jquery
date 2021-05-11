@@ -1,2 +1,2 @@
-# Jquery_Practice
+# Jquery
 learning
