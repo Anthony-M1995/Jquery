@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery callback function</title>
+
+    <style>
+        div {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">toggle</button>
+
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum nisi id nihil debitis, quae fugit iste doloribus quo, possimus eaque explicabo autem in voluptatem sed optio esse? Vel, accusamus!</p>
+    </div>
+    
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                $('.div1 > p').fadeToggle(1500,function(){
+                    alert('fade transition completed')
+                })
+            })
+        })
+    </script>
+</body>
+</html>
