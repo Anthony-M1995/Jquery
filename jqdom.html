@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery DOM Manipulation</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 40px;
+            border: 2px solid red;
+            margin-bottom:20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(248, 214, 214);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+        }
+        p{
+            color: green;
+        }
+        h1,h2,h3{
+            display: block;
+            text-align: center;
+        }
+        button{
+            padding: 12px 32px;
+            border: 1px solid gold;
+            background-color: #222222;
+            color:gold;
+            font-size: 20px;
+            border-radius: 32px;
+        }
+        button:hover{
+            color: gold;
+            background-color: rgb(238, 0, 0);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+            transition: all .3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JQuery DOM Manipulation</h1>
+
+    <!-- methods in this section used are text(), html(), attr(), css() -->
+    <div><button id="btn1">Click here!</button></div>
+
+    <h1>Here text() and html() method practice</h1>
+    <div id="div1" class="mydivs">
+
+        <p id="p1" class="p1class">Here the text() method acting as a getter function and <b>when you pass a argument</b> in this method it will change the inner html </p>
+        
+
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                // here this direct method 
+                // alert($('#p1').text());
+
+                // here var is used to hold the txt
+                // $('#p1').html("now im here passed the value here to change htlm text using text method, In html() method the html tag the text replace as a html tag element and converts to html function <b>like bolded here</b> ");
+
+                // In this method attr() method it shows the class of an html
+                // alert($('#p1').attr("class"));
+
+                // In this method the css() method used to show the style of an html element
+                alert($('#p1').css("color"));
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
