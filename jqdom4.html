@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery DOM Manipulation part 4</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 40px;
+            border: 3px solid red;
+            margin-bottom:20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(248, 214, 214);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+        }
+        p{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        h1,h2,h3{
+            display: block;
+            text-align: center;
+        }
+        button{
+            padding:8px 18px;
+            border: 1px solid gold;
+            background-color: #222222;
+            color:gold;
+            font-size: 20px;
+            border-radius: 32px;
+            margin: 5px;
+        }
+        button:hover{
+            color: gold;
+            background-color: rgb(238, 0, 0);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+            transition: all .3s;
+        }
+        .fdc{
+            flex-direction: column;
+        }
+        .fdr{
+            flex-direction: row;
+        }
+        .new{
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JQuery DOM Manipulation</h1>
+
+    <div class="fdc">
+        <h1>Here the append, prepand, after, before, remove and empty mehtods are used</h1>
+        <p>addClass() - Adds or more classes to the selected elements</p>
+        <p>removeClass() - Remove one or more classes form the selected elements</p>
+        <p>toggleClass() - Togglee between adding/removing form the selected elements</p>
+        <p>css() - sets or return the style attribute</p>
+        
+    </div>
+    <div class="fdr">
+
+        <button id="btn1">addClass</button>
+        <button id="btn2">removeClass</button>
+        <button id="btn3">toggleClacc</button>
+        <button id="btn4">css</button>
+        
+    </div>
+
+    
+    
+    <div id="div1" class="mydivs fdc">
+
+        <p id="p1" class="p1class">This the first paragraph in first division</p> 
+        <p id="p2" class="p2class">This the second paragraph in first division</p>
+        
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                
+                $("#div1").addClass("new");
+
+            });
+
+            $('#btn2').click(function(){
+                
+                $("#div1").removeClass("new");
+
+            });
+
+            $('#btn3').click(function(){
+                
+                $("#div1").toggleClass("new");
+
+            });
+
+            $('#btn4').click(function(){
+                
+                alert($("p").css("font-size"));
+
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+</html>
