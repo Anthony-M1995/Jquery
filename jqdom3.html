@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery DOM Manipulation part 3</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 40px;
+            border: 3px solid red;
+            margin-bottom:20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(248, 214, 214);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+        }
+        p{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        h1,h2,h3{
+            display: block;
+            text-align: center;
+        }
+        button{
+            padding:8px 18px;
+            border: 1px solid gold;
+            background-color: #222222;
+            color:gold;
+            font-size: 20px;
+            border-radius: 32px;
+            margin: 5px;
+        }
+        button:hover{
+            color: gold;
+            background-color: rgb(238, 0, 0);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+            transition: all .3s;
+        }
+        .fdc{
+            flex-direction: column;
+        }
+        .fdr{
+            flex-direction: row;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>JQuery DOM Manipulation</h1>
+
+    <div class="fdc">
+        <h1>Here the append, prepand, after, before, remove and empty mehtods are used</h1>
+        <p>append() - Inserts content at the end of the selected element</p>
+        <p>prepend() - Inserts content at the begining of the selected element</p>
+        <p>after() - Insert content after the selected element</p>
+        <p>before() - Inserts content before the selected element</p>
+        <p>remove() - Remove the selected element (and its child elements)</p>
+        <p>empty() - Remove the child element from the selected element</p>
+    </div>
+    <div class="fdr">
+        <button id="btn1">Append</button>
+        <button id="btn2">Prepend</button>
+        <button id="btn3">After</button>
+        <button id="btn4">Before</button>
+        <button id="btn6">Empty</button>
+        <button id="btn5">Remove</button>
+        
+    </div>
+
+    
+    
+    <div id="div1" class="mydivs fdc">
+
+        <p id="p1" class="p1class">This the first paragraph in first division</p> 
+        <p id="p2" class="p2class">This the second paragraph in first division</p>
+        
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                
+                $("#div1").append("<p>This the third para by above method used</p>");
+
+            });
+
+            $('#btn3').click(function(){
+                
+                $("#div1").after("<p>This para used after method to add content after the selected element</p>");
+
+            });
+
+            $('#btn2').click(function(){
+                
+                $("#div1").prepend("<p>This para used prepond to add the content first</p>");
+
+            });
+
+            $('#btn4').click(function(){
+                
+                $("#div1").before("<p>This para used before to add the content first of the selected element</p>");
+
+            });
+
+            $('#btn6').click(function(){
+                
+                $("#div1").empty();
+
+            });
+            $('#btn5').click(function(){
+                
+                $("#div1").remove();
+
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+</html>
