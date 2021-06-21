@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery DOM Manipulation part 2</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 40px;
+            border: 2px solid red;
+            margin-bottom:20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(248, 214, 214);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+        }
+        p{
+            color: green;
+        }
+        h1,h2,h3{
+            display: block;
+            text-align: center;
+        }
+        button{
+            padding: 12px 32px;
+            border: 1px solid gold;
+            background-color: #222222;
+            color:gold;
+            font-size: 20px;
+            border-radius: 32px;
+        }
+        button:hover{
+            color: gold;
+            background-color: rgb(238, 0, 0);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+            transition: all .3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JQuery DOM Manipulation</h1>
+
+    <!-- methods in this section used are text(), html(), attr(), css() -->
+    <div>
+        <button id="btn1">Set Value</button>
+        <button id="btn2">Get Value</button>
+    </div>
+
+    <h1>Here text() and html() method practice</h1>
+    
+    <div id="div1" class="mydivs">
+
+        <p id="p1" class="p1class" value="Hello World">
+            Here the here the <b>attr() method and css() method</b> use to <i>set and get</i> the value 
+        </p>
+        
+
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                
+                $('#p1').css("font-size", "25px");
+
+            });
+
+            $('#btn2').click(function() {
+
+                alert($('#p1').css("font-size"));
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
