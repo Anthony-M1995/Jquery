@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery UI Practice</title>
+
+    <link rel="stylesheet" href="./jqui/jquery-ui.css">
+    <link rel="stylesheet" href="./jqui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./jqui/jquery-ui.theme.css">
+
+    <style>
+        .div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 40px;
+            border: 3px solid red;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(248, 214, 214);
+            box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, .15);
+        }
+
+        p {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            display: block;
+            text-align: center;
+        }
+        .fdc {
+            flex-direction: column;
+        }
+
+        .fdr {
+            flex-direction: row;
+        }
+
+        .new {
+            border-radius: 10px;
+            background-color: aqua;
+        }
+        .ip{
+            padding: 6px;
+            color: red;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 18px;
+            text-align: center;
+        }
+        .mx-auto{
+            display: block;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Jquery Ui Practice</h1>
+
+    <div class="div fdc">
+
+        <h2>Tooltip ui in jquery</h2>
+
+        <img src="./img/RSB03GBB.png" alt="clock" id="clock" style="width: 250px;" title="">
+
+    </div>
+    
+</body>
+
+<script src="./jqui/external/jquery/jquery.js"></script>
+<script src="./jqui/jquery-ui.js"></script>
+
+<script>
+        
+       $('#clock').tooltip({
+        //    track:true,
+           content: "Hi this is rolex wall clock",
+           show:{effect:"bounce",duration: 2000},
+           hide:{effect:"explode",duration: 500}
+        //    show:{effect:"pulsate",duration: 2000}
+           
+        //    show:{effect:"highlight",duration: 2000}
+        //    hide:{effect:"blind",duration: 2000}
+       });
+
+</script>
+
+</html>
